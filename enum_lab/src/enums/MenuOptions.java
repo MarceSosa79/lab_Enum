@@ -13,6 +13,12 @@ MenuOptions(String description) {
 
 public static void printMenu() {
     System.out.println("Consulte tabla anual.");
-    for (MenuOptions )
+    for (MenuOptions opt : MenuOptions.values()) {
+        System.out.printf("%d) %s%n", opt.ordinal() + 1, opt.description);
+    }
+}
+public static MenuOptions fromOrdinal(int choice) {
+    if (choice < 1 || choice > values().length) throw new IllegalArgumentException();
+    return values() [choice - 1]; 
 }
 }

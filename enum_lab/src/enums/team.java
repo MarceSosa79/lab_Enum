@@ -1,6 +1,6 @@
 package enums;
 
-public enum team{
+public enum Team {
         NACIONAL(50),
         PEÑAROL(47),
         LIVERPOOL(43),
@@ -9,7 +9,12 @@ public enum team{
     
     int points;
 
-    team(int points) {
+    Team(int points) {
         this.points = points;
     }
+
+    public int getPoints() {
+        return points;
+    }
+
 }
